@@ -9,3 +9,7 @@ parts:
   chapters:
   - file: Optimization/Golden-section-search.ipynb
   - file: Optimization/Steepest-descent.ipynb
+- caption: B. Artificial neuron network
+  numbered: true
+  chapters:
+  - file: ANN/Artificial-neural-network.ipynb
