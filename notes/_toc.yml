@@ -3,5 +3,9 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Golden-section-search.ipynb
+parts:
+- caption: A. Optimization
+  numbered: true
+  chapters:
+  - file: Optimization/Golden-section-search.ipynb
+  - file: Optimization/Steepest-descent.ipynb
