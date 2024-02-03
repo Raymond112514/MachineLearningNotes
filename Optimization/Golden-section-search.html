@@ -191,6 +191,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Golden section search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Steepest-descent.html">2. Steepest descent</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Artificial neuron network</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">3. Artificial neuron networks</a></li>
+
+</ul>
 
     </div>
 </nav></div>
@@ -387,7 +392,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section id="golden-section-search">
+<h1><span class="section-number">1. </span>Golden section search<a class="headerlink" href="#golden-section-search" title="Link to this heading">#</a></h1>
+<p>The golden section search uses the following observation:</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -395,9 +403,6 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="golden-section-search">
-<h1><span class="section-number">1. </span>Golden section search<a class="headerlink" href="#golden-section-search" title="Link to this heading">#</a></h1>
-<p>The golden section search uses the following observation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">golden_section_search</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="n">b0</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
