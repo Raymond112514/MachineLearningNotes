@@ -9,6 +9,7 @@ parts:
   chapters:
   - file: Optimization/Golden-section-search.ipynb
   - file: Optimization/Steepest-descent.ipynb
+  - file: Optimization/Second-order-methods.ipynb
 - caption: B. Artificial neuron network
   numbered: true
   chapters:
