@@ -193,7 +193,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Artificial neuron network</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Artificial neuron networks</a></li>
-
 </ul>
 
     </div>
@@ -389,10 +388,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Artificial neuron networks</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">4. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">3.1. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">3.2. Multilayer perceptron</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -479,9 +477,8 @@ Passed in inputs 1 and 1, returned 1
 <div class="math notranslate nohighlight">
 \[ x_1+x_2=\theta^*\]</div>
 <p>And therefore it is unable to model XOR gate, which is not linearly separable. This motivates the following generalization</p>
-</section>
 <section id="simple-perceptron">
-<h1><span class="section-number">4. </span>Simple perceptron<a class="headerlink" href="#simple-perceptron" title="Link to this heading">#</a></h1>
+<h2><span class="section-number">3.1. </span>Simple perceptron<a class="headerlink" href="#simple-perceptron" title="Link to this heading">#</a></h2>
 <p>A generalization of McCulloch Pitts neuron is the perceptron. Instead of simply adding the inputs, it considers the linear combinations of these inputs. Mathematically,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y=\begin{cases} 1\;\;\;\;\;\;\;\text{if}\;w_1x_1+w_2x_2+b\geq 0\\
@@ -490,6 +487,54 @@ Passed in inputs 1 and 1, returned 1
 <div class="math notranslate nohighlight">
 \[w_1x_2+w_2x_2+b=0\]</div>
 <p>In classification tasks, the weights of a simple perceptron can be determined by using the perceptron algorithm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">single_perceptron</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">neuron</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">w1</span><span class="o">*</span><span class="n">x1</span> <span class="o">+</span> <span class="n">w2</span><span class="o">*</span><span class="n">x2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">neuron</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="multilayer-perceptron">
+<h2><span class="section-number">3.2. </span>Multilayer perceptron<a class="headerlink" href="#multilayer-perceptron" title="Link to this heading">#</a></h2>
+<p>By stacking multiple perceptrons, however, we are able to generate nonlinear decision boundaries. Consider the following example of modeling the XOR gate</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">XOR_gate</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
+    <span class="n">perceptron1</span> <span class="o">=</span> <span class="n">single_perceptron</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>
+    <span class="n">perceptron2</span> <span class="o">=</span> <span class="n">single_perceptron</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">perceptron3</span> <span class="o">=</span> <span class="n">single_perceptron</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">h1</span> <span class="o">=</span> <span class="n">perceptron1</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+    <span class="n">h2</span> <span class="o">=</span> <span class="n">perceptron2</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">perceptron3</span><span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inputs</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Passed in inputs </span><span class="si">{</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">, returned </span><span class="si">{</span><span class="n">XOR_gate</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Passed in inputs 0 and 0, returned 0
+Passed in inputs 1 and 0, returned 1
+Passed in inputs 0 and 1, returned 1
+Passed in inputs 1 and 1, returned 0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -547,10 +592,9 @@ Passed in inputs 1 and 1, returned 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Artificial neuron networks</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">4. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">3.1. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">3.2. Multilayer perceptron</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
