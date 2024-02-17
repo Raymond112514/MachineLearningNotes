@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>7. Artificial neuron networks &#8212; My sample book</title>
+    <title>5. Artificial neuron networks &#8212; My sample book</title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=d13d2e04" />
+    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=4c5eb572" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -195,12 +195,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Generative-models.html">4. Generative modeling</a></li>
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Artificial neuron networks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Artificial neuron networks</a></li>
 </ul>
 
     </div>
@@ -396,8 +394,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">7.1. Simple perceptron</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">7.2. Multilayer perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">5.1. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">5.2. Multilayer perceptron</a></li>
 </ul>
             </nav>
         </div>
@@ -410,7 +408,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="artificial-neuron-networks">
-<h1><span class="section-number">7. </span>Artificial neuron networks<a class="headerlink" href="#artificial-neuron-networks" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5. </span>Artificial neuron networks<a class="headerlink" href="#artificial-neuron-networks" title="Link to this heading">#</a></h1>
 <p>An artificial neural network seek to model how our brain process information. This is useful since our brain is good at tasks computers can’t do. For example, almost instantly from birth, a baby can recognize the face of father and mother. For a computer, however, this is a nontrivial task. <br></p>
 <p>The brain contains around 10 billion neurons, and each neuron is connected to other neurons through 10000 synapses. Essentially, a brain can be thought as a massive parallel computer that can perform parallel computations extremely efficiently. <br></p>
 <p>In 1943 Warren S. McCulloch and Walter Pitts, a neuroscientist and a logiciann desgined the first artificial neuron. It seeks to model the action potential in biological neurons. <br></p>
@@ -486,7 +484,7 @@ Passed in inputs 1 and 1, returned 1
 \[ x_1+x_2=\theta^*\]</div>
 <p>And therefore it is unable to model XOR gate, which is not linearly separable. This motivates the following generalization</p>
 <section id="simple-perceptron">
-<h2><span class="section-number">7.1. </span>Simple perceptron<a class="headerlink" href="#simple-perceptron" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Simple perceptron<a class="headerlink" href="#simple-perceptron" title="Link to this heading">#</a></h2>
 <p>A generalization of McCulloch Pitts neuron is the perceptron. Instead of simply adding the inputs, it considers the linear combinations of these inputs. Mathematically,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y=\begin{cases} 1\;\;\;\;\;\;\;\text{if}\;w_1x_1+w_2x_2+b\geq 0\\
@@ -509,7 +507,7 @@ Passed in inputs 1 and 1, returned 1
 </div>
 </section>
 <section id="multilayer-perceptron">
-<h2><span class="section-number">7.2. </span>Multilayer perceptron<a class="headerlink" href="#multilayer-perceptron" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>Multilayer perceptron<a class="headerlink" href="#multilayer-perceptron" title="Link to this heading">#</a></h2>
 <p>By stacking multiple perceptrons, however, we are able to generate nonlinear decision boundaries. Consider the following example of modeling the XOR gate</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,8 +598,8 @@ Passed in inputs 1 and 1, returned 0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">7.1. Simple perceptron</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">7.2. Multilayer perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-perceptron">5.1. Simple perceptron</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multilayer-perceptron">5.2. Multilayer perceptron</a></li>
 </ul>
   </nav></div>
 
