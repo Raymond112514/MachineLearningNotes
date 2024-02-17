@@ -10,7 +10,11 @@ parts:
   - file: Optimization/Golden-section-search.ipynb
   - file: Optimization/Steepest-descent.ipynb
   - file: Optimization/Second-order-methods.ipynb
-- caption: B. Artificial neuron network
+- caption: B. Machine learning
+  numbered: true
+  chapters:
+  - file: MachineLearning/Generative-models.ipynb 
+- caption: C. Artificial neuron network
   numbered: true
   chapters:
   - file: ANN/Artificial-neural-network.ipynb
