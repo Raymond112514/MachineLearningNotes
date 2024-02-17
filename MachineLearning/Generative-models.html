@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=03fac7bf" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -544,7 +545,7 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4e4e04f9b04ee0f77f2b71977cd1eda56e6ab3fd198acf7a84414eae4cb9f53e.png" src="../_images/4e4e04f9b04ee0f77f2b71977cd1eda56e6ab3fd198acf7a84414eae4cb9f53e.png" />
+<img alt="../_images/97e8b2f1ceb4202cb6b2fb57a9cd05f84872cda51d6fe8a622979a321441016c.png" src="../_images/97e8b2f1ceb4202cb6b2fb57a9cd05f84872cda51d6fe8a622979a321441016c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -560,9 +561,9 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [1.12300755 1.03101905], [-4.91886024 -0.92965343], [-4.91886024 -0.92965343]
-The estimated covariance matrix is: [[ 1.01402685 -0.18079701],
-                                     [-0.18079701  2.86797963]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [0.90063444 0.94480601], [-5.01030838 -1.09873138], [-5.01030838 -1.09873138]
+The estimated covariance matrix is: [[ 0.91590837 -0.20251527],
+                                     [-0.20251527  2.75043275]]
 </pre></div>
 </div>
 </div>
@@ -584,63 +585,6 @@ The estimated covariance matrix is: [[ 1.01402685 -0.18079701],
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>                      <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="nn">Cell In[2], line 53,</span> in <span class="ni">LinearDiscriminantAnalysis.predict</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">53</span>     <span class="n">prob</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">cov</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">logits</span><span class="o">.</span><span class="n">argmax</span><span class="p">())</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:393,</span> in <span class="ni">multivariate_normal_gen.__call__</span><span class="nt">(self, mean, cov, allow_singular, seed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">388</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">allow_singular</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">389</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Create a frozen multivariate normal distribution.</span>
-<span class="g g-Whitespace">    </span><span class="mi">390</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">391</span><span class="sd">     See `multivariate_normal_frozen` for more information.</span>
-<span class="g g-Whitespace">    </span><span class="mi">392</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">393</span>     <span class="k">return</span> <span class="n">multivariate_normal_frozen</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">394</span>                                       <span class="n">allow_singular</span><span class="o">=</span><span class="n">allow_singular</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">395</span>                                       <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:832,</span> in <span class="ni">multivariate_normal_frozen.__init__</span><span class="nt">(self, mean, cov, allow_singular, seed, maxpts, abseps, releps)</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">allow_singular</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>              <span class="n">maxpts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">abseps</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">releps</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Create a frozen multivariate normal distribution.</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="sd">     Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">830</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">831</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">832</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_dist</span> <span class="o">=</span> <span class="n">multivariate_normal_gen</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">833</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cov_object</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">834</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_dist</span><span class="o">.</span><span class="n">_process_parameters</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">allow_singular</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">835</span>     <span class="bp">self</span><span class="o">.</span><span class="n">allow_singular</span> <span class="o">=</span> <span class="n">allow_singular</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">cov_object</span><span class="o">.</span><span class="n">_allow_singular</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:386,</span> in <span class="ni">multivariate_normal_gen.__init__</span><span class="nt">(self, seed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">384</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">385</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">386</span>     <span class="bp">self</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">doccer</span><span class="o">.</span><span class="n">docformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">,</span> <span class="n">mvn_docdict_params</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/_lib/doccer.py:65,</span> in <span class="ni">docformat</span><span class="nt">(docstring, docdict)</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="n">newlines</span> <span class="o">=</span> <span class="p">[</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span>     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-<span class="ne">---&gt; </span><span class="mi">65</span>         <span class="n">newlines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">indent</span><span class="o">+</span><span class="n">line</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">indented</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">newlines</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -656,7 +600,7 @@ The estimated covariance matrix is: [[ 1.01402685 -0.18079701],
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/15f04df06c919a9d07b8d745867436c6cf187f87002be86699e2a8389aa365de.png" src="../_images/15f04df06c919a9d07b8d745867436c6cf187f87002be86699e2a8389aa365de.png" />
+<img alt="../_images/91fed8670ee271e8debc711f880f076d68c0556cd3ec9ae883b950b9fd335f14.png" src="../_images/91fed8670ee271e8debc711f880f076d68c0556cd3ec9ae883b950b9fd335f14.png" />
 </div>
 </div>
 </section>
@@ -754,7 +698,7 @@ The estimated covariance matrix is: [[ 1.01402685 -0.18079701],
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/88fc62b5ca96fe79892d5620aa50ddaa5c02e12d2f88579169703018f3d68360.png" src="../_images/88fc62b5ca96fe79892d5620aa50ddaa5c02e12d2f88579169703018f3d68360.png" />
+<img alt="../_images/517c5d4933154197078e46a9fa86bb4f801229f2ee2d6b476131230fe1e512b3.png" src="../_images/517c5d4933154197078e46a9fa86bb4f801229f2ee2d6b476131230fe1e512b3.png" />
 </div>
 </div>
 </section>
