@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=d13d2e04" />
+    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=4c5eb572" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Generative-models';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Artificial neuron networks" href="../ANN/Artificial-neural-network.html" />
+    <link rel="next" title="5. Artificial neuron networks" href="../ANN/Artificial-neural-network.html" />
     <link rel="prev" title="3. Second order methods" href="../Optimization/Second-order-methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -196,12 +196,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Generative modeling</a></li>
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">7. Artificial neuron networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">5. Artificial neuron networks</a></li>
 </ul>
 
     </div>
@@ -397,11 +395,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Generative modeling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">5. Linear discriminant analysis</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">6. Quadratic discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">4.1. Linear discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">4.2. Quadratic discriminant analysis</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -414,10 +410,15 @@ document.write(`
                   
   <section id="generative-modeling">
 <h1><span class="section-number">4. </span>Generative modeling<a class="headerlink" href="#generative-modeling" title="Link to this heading">#</a></h1>
-<p>Suppose we are given data <span class="math notranslate nohighlight">\(\mathcal{D}=\{x_i, y_i\}_{i=1}^n\)</span>, where <span class="math notranslate nohighlight">\(x_i\in \mathbb{R}^p, y_i=\{0,1,2...K\}\)</span>.</p>
-</section>
+<p>In discriminative models like linear and logistic regression, we modeled the posterior <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k|X\}\)</span> directly. In generative models, however, we turn to modeling the joint distribution</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}\{X, Y\}=\mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}\]</div>
+<p>By modeling the distribution <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k\}\)</span>. Once we’ve model these, we can recontruct the posterior using Bayes theorem</p>
+<div class="math notranslate nohighlight">
+\[\mathbb{P}\{Y=k|X\}=\frac{\mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}}{\sum_{k} \mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}}\]</div>
+<p>Linear and quadratic discriminant analysis are two major generative models. Both models model the distribution <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> as normal distribution with different mean and covariance matrix. Naive Bayes model, on the other hand, made a simplifying assumptions that the features are conditionally independent.</p>
 <section id="linear-discriminant-analysis">
-<h1><span class="section-number">5. </span>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Link to this heading">#</a></h1>
+<h2><span class="section-number">4.1. </span>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Link to this heading">#</a></h2>
 <p>In linear discriminant analysis, we model <span class="math notranslate nohighlight">\(X|y=k\)</span> as a multivariate normal distribution <span class="math notranslate nohighlight">\(N(\mu_k, \mathbf{\Sigma})\)</span>. In particular,</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{x|y=k\} = \frac{1}{(2\pi)^{p/2}|\mathbf{\Sigma}|^{1/2}}\exp\bigg(-\frac{1}{2}(x-\mu_k)^T\mathbf{\Sigma}^{-1}(x-\mu_k)\bigg)\]</div>
@@ -427,9 +428,10 @@ document.write(`
 <p>We them compute the posterior using Bayes rule</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{y=k|X=x\} = \frac{\pi_k \mathbb{P}\{x|y=k\}}{\sum_{i=0}^K \pi_i \mathbb{P}\{x|y=i\}}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\pi_k\)</span> denote the prior distribution and is estimated by</p>
+<p>Where the prior distribution is estimated by</p>
 <div class="math notranslate nohighlight">
-\[\pi_k = \frac{N_k}{N}\]</div>
+\[\mathbb{P}\{y=k\} = \frac{N_k}{N}\]</div>
+<p>The posterior is then determined using equation <span class="math notranslate nohighlight">\((*)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -545,7 +547,7 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/af18724da05bd702baacc3bc40c47bc303c3fa3810554179404af6f1ee89be7a.png" src="../_images/af18724da05bd702baacc3bc40c47bc303c3fa3810554179404af6f1ee89be7a.png" />
+<img alt="../_images/c4692bc797634cfbb8dfbb1fa16bb4afa9f389d35b140bebe3dfffa4769f41fe.png" src="../_images/c4692bc797634cfbb8dfbb1fa16bb4afa9f389d35b140bebe3dfffa4769f41fe.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -561,9 +563,9 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [0.85426293 1.61031605], [-4.88538796 -1.36476592], [-4.88538796 -1.36476592]
-The estimated covariance matrix is: [[1.00499352 0.02400335],
-                                     [0.02400335 2.81601072]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [1.27357389 1.10706513], [-5.04438081 -1.10232264], [-5.04438081 -1.10232264]
+The estimated covariance matrix is: [[ 0.7201063  -0.10724796],
+                                     [-0.10724796  2.90561383]]
 </pre></div>
 </div>
 </div>
@@ -600,12 +602,12 @@ The estimated covariance matrix is: [[1.00499352 0.02400335],
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/24fc108f62e50389094db70988efc40f5283f4ab779c5bedefa76d2054c96a86.png" src="../_images/24fc108f62e50389094db70988efc40f5283f4ab779c5bedefa76d2054c96a86.png" />
+<img alt="../_images/4139231b86d0385da6fbf78d38b6fc861867322f47297598fb1c8fbf53b49972.png" src="../_images/4139231b86d0385da6fbf78d38b6fc861867322f47297598fb1c8fbf53b49972.png" />
 </div>
 </div>
 </section>
 <section id="quadratic-discriminant-analysis">
-<h1><span class="section-number">6. </span>Quadratic discriminant analysis<a class="headerlink" href="#quadratic-discriminant-analysis" title="Link to this heading">#</a></h1>
+<h2><span class="section-number">4.2. </span>Quadratic discriminant analysis<a class="headerlink" href="#quadratic-discriminant-analysis" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuadraticDiscriminantAnalysis</span><span class="p">:</span>
@@ -698,9 +700,10 @@ The estimated covariance matrix is: [[1.00499352 0.02400335],
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c8f84a4b83e4a1bfc6393a31bd426739a909505283422df0dcf350312d7d09bf.png" src="../_images/c8f84a4b83e4a1bfc6393a31bd426739a909505283422df0dcf350312d7d09bf.png" />
+<img alt="../_images/23cdfae29c3647b602c136a9c3ed2fb31a3be828a2449240422c6235d6a5af98.png" src="../_images/23cdfae29c3647b602c136a9c3ed2fb31a3be828a2449240422c6235d6a5af98.png" />
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -747,7 +750,7 @@ The estimated covariance matrix is: [[1.00499352 0.02400335],
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Artificial neuron networks</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Artificial neuron networks</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -767,11 +770,9 @@ The estimated covariance matrix is: [[1.00499352 0.02400335],
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Generative modeling</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">5. Linear discriminant analysis</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">6. Quadratic discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">4.1. Linear discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">4.2. Quadratic discriminant analysis</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
