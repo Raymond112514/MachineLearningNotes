@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Second order methods &#8212; My sample book</title>
+    <title>4. Empirical Risk Minimization (ERM) &#8212; My sample book</title>
   
   
   
@@ -68,11 +68,11 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Optimization/Second-order-methods';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Empirical-risk-minimization';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Empirical Risk Minimization (ERM)" href="../MachineLearning/Empirical-risk-minimization.html" />
-    <link rel="prev" title="2. Steepest descent" href="Steepest-descent.html" />
+    <link rel="next" title="5. Discriminative models" href="Discriminative-models.html" />
+    <link rel="prev" title="3. Second order methods" href="../Optimization/Second-order-methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,17 +188,17 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">A. Optimization</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Golden-section-search.html">1. Golden section search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Steepest-descent.html">2. Steepest descent</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Second order methods</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Optimization/Golden-section-search.html">1. Golden section search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Optimization/Steepest-descent.html">2. Steepest descent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Empirical-risk-minimization.html">4. Empirical Risk Minimization (ERM)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Discriminative-models.html">5. Discriminative models</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../MachineLearning/Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../MachineLearning/Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Empirical Risk Minimization (ERM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -278,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FOptimization/Second-order-methods.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMachineLearning/Empirical-risk-minimization.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/Optimization/Second-order-methods.ipynb" target="_blank"
+      <li><a href="../_sources/MachineLearning/Empirical-risk-minimization.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Second order methods</h1>
+    <h1>Empirical Risk Minimization (ERM)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,7 +402,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-gradient-method">3.1. Conjugate gradient method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1. Risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-risk-minimization">4.2. Empirical risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constrain-feasible-function-set">4.3. Constrain feasible function set</a></li>
 </ul>
             </nav>
         </div>
@@ -414,11 +416,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="second-order-methods">
-<h1><span class="section-number">3. </span>Second order methods<a class="headerlink" href="#second-order-methods" title="Link to this heading">#</a></h1>
-<p>The gradient descent method introduced in the previous section is an example of first order method. In first order methods, we rely on both <span class="math notranslate nohighlight">\(f(x)\)</span> and <span class="math notranslate nohighlight">\(f'(x)\)</span>. In this section, we will discuss some improvements over gradient descent.</p>
-<section id="conjugate-gradient-method">
-<h2><span class="section-number">3.1. </span>Conjugate gradient method<a class="headerlink" href="#conjugate-gradient-method" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="empirical-risk-minimization-erm">
+<h1><span class="section-number">4. </span>Empirical Risk Minimization (ERM)<a class="headerlink" href="#empirical-risk-minimization-erm" title="Link to this heading">#</a></h1>
+<section id="risk-minimization">
+<h2><span class="section-number">4.1. </span>Risk minimization<a class="headerlink" href="#risk-minimization" title="Link to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> <span class="math notranslate nohighlight">\(\mathcal{Y}\)</span> denote the input, response distribution. In machine learning, given <span class="math notranslate nohighlight">\(X\sim \mathcal{X}, Y\sim \mathcal{Y}\)</span>, the main goal is to learn to predict the response <span class="math notranslate nohighlight">\(Y\)</span> given the input <span class="math notranslate nohighlight">\(X\)</span>. In other words, we want to find a predictor <span class="math notranslate nohighlight">\(f:\mathcal{X}\rightarrow \mathcal{Y}\)</span> such that <span class="math notranslate nohighlight">\(f(X)\)</span> predicts <span class="math notranslate nohighlight">\(Y\)</span> nicely. To measure how “nice” a predictor is using a loss function <span class="math notranslate nohighlight">\(\ell: \mathcal{Y}\times \mathcal{Y}\rightarrow \mathbb{R}_{\geq 0}\)</span>. If <span class="math notranslate nohighlight">\(\ell(f(X), Y)\)</span> is small on average (note that <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> are random variables), then <span class="math notranslate nohighlight">\(f\)</span> is a good predictor. We can frame this as an optimization problem</p>
+<div class="math notranslate nohighlight">
+\[f^* = \underset{f}{\text{argmin}}\; \underbrace{\mathbb{E}_{(X, Y)\sim \mathcal{X}\times \mathcal{Y}}[\ell(f(X), Y)]}_{R(f)} \tag{1}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(R(f)\)</span> denote the risk, or the average loss, of a predictor. Note that this optimization problem is extremely hard to solve, for three main reasons</p>
+<ol class="arabic simple">
+<li><p>The distribution <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{Y}\)</span> is typically unknown in practice.</p></li>
+<li><p>Even if the distribution <span class="math notranslate nohighlight">\(\mathcal{X}, \mathcal{Y}\)</span> is known, solving the optimization problem requires minimizing a function inside a double integral, which is a hard problem.</p></li>
+<li><p>The space of all feasible fucntion is a large set (typically the set of all measurable functions).</p></li>
+</ol>
+<p>This means that in practice, we often cannot solve <span class="math notranslate nohighlight">\((1)\)</span> exactly. We need to simiplfy the optimziation problem.</p>
+</section>
+<section id="empirical-risk-minimization">
+<h2><span class="section-number">4.2. </span>Empirical risk minimization<a class="headerlink" href="#empirical-risk-minimization" title="Link to this heading">#</a></h2>
+<p>Even though the distribution <span class="math notranslate nohighlight">\(\mathcal{X}, \mathcal{Y}\)</span> is unknown in practice, we do have access to the samples <span class="math notranslate nohighlight">\(\mathcal{D}=\{(X_i, y_i)\}_{i\in [n]}\sim \mathcal{X}\times \mathcal{Y}\)</span>. Since under certain regularity conditions</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i)\;\xrightarrow{\;\;n \to \infty\;\;}\;\mathbb{E}_{(X, Y)\sim \mathcal{X}\times \mathcal{Y}}[\ell(f(X), Y)]\]</div>
+<p>This motivates us to replace the objective in <span class="math notranslate nohighlight">\((1)\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\hat{f} =  \underset{f}{\text{argmin}}\; \underbrace{\frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i)}_{\hat{R}(f)} \tag{2}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\hat{R}(f)\)</span> is called the empirical risk, it is an estimate of the true risk. This new optimization problem solves problem 1 and problem 2. The size of feasible function is still too large.</p>
+</section>
+<section id="constrain-feasible-function-set">
+<h2><span class="section-number">4.3. </span>Constrain feasible function set<a class="headerlink" href="#constrain-feasible-function-set" title="Link to this heading">#</a></h2>
+<p>Since the size of feasible function set is still too large, a natural resolution is to consider a constrained feasible set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\hat{f}_{\mathcal{F}} = \underset{f\in \mathcal{F}}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i) \tag{3}\]</div>
+<p>If the set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is not parameterized, then solving <span class="math notranslate nohighlight">\((3)\)</span> gives us a nonparameteric model. On the other hand, if <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is parameterized by <span class="math notranslate nohighlight">\(\theta\in \Theta\)</span>, then the final estimate is called a parametric model. In this case, finding the optimal function is equivalent to finding the optimial parameter</p>
+<div class="math notranslate nohighlight">
+\[\hat{\theta} = \underset{\theta \in \Theta}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n \ell(f_{\theta}(X_i), y_i) \tag{4}\]</div>
+<p>Note that problem <span class="math notranslate nohighlight">\((4)\)</span> can be solved numerically using algorithms such as gradient descent and stochastic gradient descent.</p>
 </section>
 </section>
 
@@ -435,7 +466,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Optimization"
+            path: "./MachineLearning"
         },
         predefinedOutput: true
     }
@@ -453,20 +484,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Steepest-descent.html"
+       href="../Optimization/Second-order-methods.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Steepest descent</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Second order methods</p>
       </div>
     </a>
     <a class="right-next"
-       href="../MachineLearning/Empirical-risk-minimization.html"
+       href="Discriminative-models.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Empirical Risk Minimization (ERM)</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Discriminative models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -486,7 +517,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-gradient-method">3.1. Conjugate gradient method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1. Risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-risk-minimization">4.2. Empirical risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constrain-feasible-function-set">4.3. Constrain feasible function set</a></li>
 </ul>
   </nav></div>
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Linear regression &#8212; My sample book</title>
+    <title>8. Linear regression &#8212; My sample book</title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/Format.css?v=4c5eb572" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cdbe17b3" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -68,9 +68,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ANN/Regression and classification tasks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ANN/Neural-networks';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="7. Artificial neuron networks" href="Artificial-neural-network.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -131,8 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -195,11 +194,18 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Generative-models.html">4. Generative modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Empirical-risk-minimization.html">4. Empirical Risk Minimization (ERM)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MachineLearning/Discriminative-models.html">5. Discriminative models</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../MachineLearning/Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../MachineLearning/Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Artificial-neural-network.html">5. Artificial neuron networks</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Artificial-neural-network.html">7. Artificial neuron networks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Linear regression</a></li>
+
 </ul>
 
     </div>
@@ -271,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FANN/Regression and classification tasks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FANN/Neural-networks.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ANN/Regression and classification tasks.ipynb" target="_blank"
+      <li><a href="../_sources/ANN/Neural-networks.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -395,8 +401,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear regression</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">Logistic regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8. Linear regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">9. Logistic regression</a></li>
 </ul>
 
             </nav>
@@ -419,7 +425,7 @@ document.write(`
 </div>
 <p>In the previous section, we introduced simple and multiple perceptron. In the example, we used <span class="math notranslate nohighlight">\(\text{sgn}(x)\)</span> as the activation function. This activation function helps us in binary classification tasks. It turns out that a simple perceptron is capable of performing a wide range of tasks by altering the activation function. For example, a simple perceptron is capable of performing regression tasks by using activation functions such as linear function. It is also able to perform classification task by using logistic activation function. In this section, we will explore some generalizations of simple perceptron.</p>
 <section id="linear-regression">
-<h1>Linear regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Linear regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
 <p>By replacing the activation function to linear functions, a simple perceptron is capable of performing linear regression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -482,7 +488,7 @@ document.write(`
 Shape of output data: (100,)
 </pre></div>
 </div>
-<img alt="../_images/40e90135a5dbdfe2d9159e450d326c6d7961729bae1ba40080ce216d12387715.png" src="../_images/40e90135a5dbdfe2d9159e450d326c6d7961729bae1ba40080ce216d12387715.png" />
+<img alt="../_images/b038ca1776f6922574509f924711d0d3f60148e84a39be8b8dd245cda9e970f7.png" src="../_images/b038ca1776f6922574509f924711d0d3f60148e84a39be8b8dd245cda9e970f7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -506,7 +512,7 @@ Shape of output data: (100,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ab373b5d62faffe7422c533a4ef292b647f22e313289394ea4362cf5f6238d41.png" src="../_images/ab373b5d62faffe7422c533a4ef292b647f22e313289394ea4362cf5f6238d41.png" />
+<img alt="../_images/0c91e6567a5344e2f8f1c4acc5b9861621c13f07c2f3726c9495ec3275f25b94.png" src="../_images/0c91e6567a5344e2f8f1c4acc5b9861621c13f07c2f3726c9495ec3275f25b94.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -557,7 +563,7 @@ Shape of output data: (100,)
 </div>
 </section>
 <section id="logistic-regression">
-<h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">9. </span>Logistic regression<a class="headerlink" href="#logistic-regression" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sigmoid</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
@@ -598,6 +604,15 @@ Shape of output data: (100,)
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Artificial-neural-network.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Artificial neuron networks</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -614,8 +629,8 @@ Shape of output data: (100,)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Linear regression</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">Logistic regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">8. Linear regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#logistic-regression">9. Logistic regression</a></li>
 </ul>
 
   </nav></div>
