@@ -18,6 +18,8 @@ parts:
     - file: MachineLearning/Empirical-risk-minimization.ipynb
     - file: MachineLearning/Bias-variance-tradeoff.ipynb
   - file: MachineLearning/Discriminative-models.ipynb
+    sections:
+    - file: MachineLearning/Logistic-regression.ipynb
   - file: MachineLearning/Generative-models.ipynb
     sections:
     - file: MachineLearning/Discriminative-analysis.ipynb 
@@ -36,5 +38,7 @@ parts:
 - caption: C. Unsupervised learning
   numbered: true
   chapters:
-  - file: MachineLearning/kMean-clustering.ipynb
-  - file: MachineLearning/Hierarchical-clustering.ipynb
+  - file: MachineLearning/Clustering.ipynb
+    sections:
+     - file: MachineLearning/kMean-clustering.ipynb
+     - file: MachineLearning/Hierarchical-clustering.ipynb

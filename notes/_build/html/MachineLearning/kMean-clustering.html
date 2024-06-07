@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. K-Mean clustering &#8212; Notes on Machine learning</title>
+    <title>9.1. K-Mean clustering &#8212; Notes on Machine learning</title>
   
   
   
@@ -66,11 +66,13 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/kMean-clustering';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Hierarchical clustering" href="Hierarchical-clustering.html" />
-    <link rel="prev" title="8.3. Bagging" href="Bagging.html" />
+    <link rel="next" title="9.2. Hierarchical clustering" href="Hierarchical-clustering.html" />
+    <link rel="prev" title="9. Clustering" href="Clustering.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,20 +194,23 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Logistic-regression.html">5.1. Logistic regression</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
@@ -214,8 +219,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. K-Mean clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Hierarchical-clustering.html">10. Hierarchical clustering</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">9.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -414,7 +422,20 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="k-mean-clustering">
-<h1><span class="section-number">9. </span>K-Mean clustering<a class="headerlink" href="#k-mean-clustering" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">9.1. </span>K-Mean clustering<a class="headerlink" href="#k-mean-clustering" title="Link to this heading">#</a></h1>
+<p>The K-mean clustering algorithm aims minimize the within-cluster sum of squares, in other words, the inter-class variance. Formally, our goal is to find <span class="math notranslate nohighlight">\(K\)</span> clusters <span class="math notranslate nohighlight">\(C_1, C_2,..., C_K\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^K\sum_{X\in C_i} ||X-\mu_i||_2^2\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\mu_i\)</span>, defined as</p>
+<div class="math notranslate nohighlight">
+\[\mu_i=\frac{1}{|C_i|}\sum_{X\in C_i}X\]</div>
+<p>Denote the mean in the <span class="math notranslate nohighlight">\(i\)</span>th cluster. The k-Means algorithm attempts to find the clusters iteratively as follows</p>
+<ol class="arabic simple">
+<li><p>Randomly initialize the centroids for <span class="math notranslate nohighlight">\(K\)</span> clusters</p></li>
+<li><p>Assign each point to the centroids that is closest to itself</p></li>
+<li><p>Using the newly assigned points, recompute the cluster</p></li>
+<li><p>Go back to step 2 until convergence.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -525,12 +546,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Bagging.html"
+       href="Clustering.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8.3. </span>Bagging</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Clustering</p>
       </div>
     </a>
     <a class="right-next"
@@ -538,7 +559,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Hierarchical clustering</p>
+        <p class="prev-next-title"><span class="section-number">9.2. </span>Hierarchical clustering</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

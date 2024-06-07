@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Supervised learning &#8212; Notes on Machine learning</title>
+    <title>9. Clustering &#8212; Notes on Machine learning</title>
   
   
   
@@ -68,11 +68,11 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Supervised-learning';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Clustering';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.1. Empirical Risk Minimization" href="Empirical-risk-minimization.html" />
-    <link rel="prev" title="3. Second order methods" href="../Optimization/Second-order-methods.html" />
+    <link rel="next" title="9.1. K-Mean clustering" href="kMean-clustering.html" />
+    <link rel="prev" title="8.3. Bagging" href="Bagging.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Supervised learning</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Supervised learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supervised-learning.html">4. Supervised learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Empirical-risk-minimization.html">4.1. Empirical Risk Minimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
@@ -218,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">9. Clustering</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
 </ul>
@@ -295,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMachineLearning/Supervised-learning.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMachineLearning/Clustering.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/MachineLearning/Supervised-learning.ipynb" target="_blank"
+      <li><a href="../_sources/MachineLearning/Clustering.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +407,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Supervised learning</h1>
+    <h1>Clustering</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,9 +421,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="supervised-learning">
-<h1><span class="section-number">4. </span>Supervised learning<a class="headerlink" href="#supervised-learning" title="Link to this heading">#</a></h1>
-<p>In supervised learning, we are given some observations <span class="math notranslate nohighlight">\(\mathcal{D} = \{(X_i, y_i)\}_{i \in [n]} \in \mathcal{X} \times \mathcal{Y}\)</span> of features/responses (training data), the main goal is to predict a new <span class="math notranslate nohighlight">\(y \in \mathcal{Y}\)</span> given a previously unseen data <span class="math notranslate nohighlight">\(X \in \mathcal{X}\)</span> (testing data). In other words, we aim to learn a predictor function <span class="math notranslate nohighlight">\(f: \mathcal{X} \rightarrow \mathcal{Y}\)</span> that characterizes the relationship between the features and responses. In this section, we first introduce the empirical risk minimization (ERM) framework used in supervised learning and then move on to a discussion on generalization errors.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="clustering">
+<h1><span class="section-number">9. </span>Clustering<a class="headerlink" href="#clustering" title="Link to this heading">#</a></h1>
+<p>Clustering is an unsupervised learning task. Given data points <span class="math notranslate nohighlight">\(\mathcal{D}=\{X_i\}_{i\in [n]}\)</span>, the goal is to cluster the data points into <span class="math notranslate nohighlight">\(K\)</span> class (look for homogenous subgroups). Where <span class="math notranslate nohighlight">\(K\)</span> is some prespecified number. This can be done in many ways. In this section, we will discuss several most popular clustering algorithms. CLustering in geenral is an NP-hard problem, however, there are efficient heuristics that simplifies the computation. We start with simpler algorithms like k-Means clustering and hierarchical clustering, and then end with more complicated algorithms like DBSCAN.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -459,20 +459,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Optimization/Second-order-methods.html"
+       href="Bagging.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Second order methods</p>
+        <p class="prev-next-title"><span class="section-number">8.3. </span>Bagging</p>
       </div>
     </a>
     <a class="right-next"
-       href="Empirical-risk-minimization.html"
+       href="kMean-clustering.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Empirical Risk Minimization</p>
+        <p class="prev-next-title"><span class="section-number">9.1. </span>K-Mean clustering</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
