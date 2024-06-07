@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6.1. Discriminative analysis &#8212; My sample book</title>
+    <title>6.1. Discriminative analysis &#8212; Notes on Machine learning</title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cdbe17b3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4787184b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Discriminative-analysis';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Artificial neuron networks" href="../ANN/Artificial-neural-network.html" />
+    <link rel="next" title="6.2. Naive Bayes" href="Naive-bayes.html" />
     <link rel="prev" title="6. Generative models" href="Generative-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -156,14 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
+    <p class="title logo__title">Notes on Machine learning</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -193,20 +187,37 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Steepest-descent.html">2. Steepest descent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Supervised learning</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Empirical-risk-minimization.html">4. Empirical Risk Minimization (ERM)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supervised-learning.html">4. Supervised learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Empirical-risk-minimization.html">4.1. Empirical Risk Minimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">7. Artificial neuron networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Neural-networks.html">8. Linear regression</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="kMean-clustering.html">9. K-Mean clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hierarchical-clustering.html">10. Hierarchical clustering</a></li>
 </ul>
 
     </div>
@@ -417,7 +428,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="discriminative-analysis">
 <h1><span class="section-number">6.1. </span>Discriminative analysis<a class="headerlink" href="#discriminative-analysis" title="Link to this heading">#</a></h1>
-<p>Linear and quadratic discriminant analysis are two major generative models. Both models model the distribution <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> as normal distribution with different mean and covariance matrix. Naive Bayes model, on the other hand, made a simplifying assumptions that the features are conditionally independent.</p>
+<p>In linear and quadratic discriminant analysis, we place a strong assumption on the distribution of the data—we assume that the likelihood <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> is a multivariate normal distribution <span class="math notranslate nohighlight">\(\mathcal{N}(\mu_k, \Sigma_k)\)</span>.</p>
 <section id="linear-discriminant-analysis">
 <h2><span class="section-number">6.1.1. </span>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Link to this heading">#</a></h2>
 <p>In linear discriminant analysis, we model <span class="math notranslate nohighlight">\(X|y=k\)</span> as a multivariate normal distribution <span class="math notranslate nohighlight">\(N(\mu_k, \mathbf{\Sigma})\)</span>. In particular,</p>
@@ -548,7 +559,7 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ad3b6dd243f1168a59523bbf15f08c8b0cfcac04eca2b334d8ed1eabc3eecfd8.png" src="../_images/ad3b6dd243f1168a59523bbf15f08c8b0cfcac04eca2b334d8ed1eabc3eecfd8.png" />
+<img alt="../_images/dfc5754901c91271fb0311ebdb1751b43d4c1520ef9ed70f515f1336ff41df45.png" src="../_images/dfc5754901c91271fb0311ebdb1751b43d4c1520ef9ed70f515f1336ff41df45.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -564,9 +575,9 @@ Shape of response matrix: (150,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [1.12239151 0.79860528], [-5.16925583 -1.05755449], [-5.16925583 -1.05755449]
-The estimated covariance matrix is: [[ 0.95983922 -0.11760642],
-                                     [-0.11760642  2.68033213]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated means are: [1.09944563 1.06766279], [-5.08775699 -0.68123256], [-5.08775699 -0.68123256]
+The estimated covariance matrix is: [[ 1.20992594 -0.13847892],
+                                     [-0.13847892  3.23517818]]
 </pre></div>
 </div>
 </div>
@@ -585,64 +596,6 @@ The estimated covariance matrix is: [[ 0.95983922 -0.11760642],
                      <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
 <span class="n">Z</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
 <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">,</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">h</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>                      <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">h</span><span class="p">))</span>
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="nn">Cell In[2], line 53,</span> in <span class="ni">LinearDiscriminantAnalysis.predict</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">53</span>     <span class="n">prob</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mu</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">cov</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">logits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">logits</span><span class="o">.</span><span class="n">argmax</span><span class="p">())</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:851,</span> in <span class="ni">multivariate_normal_frozen.pdf</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">850</span> <span class="k">def</span> <span class="nf">pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">851</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logpdf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:844,</span> in <span class="ni">multivariate_normal_frozen.logpdf</span><span class="nt">(self, x)</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span> <span class="k">def</span> <span class="nf">logpdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span>     <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dist</span><span class="o">.</span><span class="n">_process_quantiles</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">844</span>     <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dist</span><span class="o">.</span><span class="n">_logpdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cov_object</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">845</span>     <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cov_object</span><span class="o">.</span><span class="n">rank</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">846</span>         <span class="n">out_of_bounds</span> <span class="o">=</span> <span class="o">~</span><span class="bp">self</span><span class="o">.</span><span class="n">cov_object</span><span class="o">.</span><span class="n">_support_mask</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/scipy/stats/_multivariate.py:530,</span> in <span class="ni">multivariate_normal_gen._logpdf</span><span class="nt">(self, x, mean, cov_object)</span>
-<span class="g g-Whitespace">    </span><span class="mi">528</span>     <span class="n">log_det_cov</span> <span class="o">=</span> <span class="n">log_det_cov</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="n">rank</span> <span class="o">=</span> <span class="n">rank</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">530</span> <span class="n">maha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">cov_object</span><span class="o">.</span><span class="n">whiten</span><span class="p">(</span><span class="n">dev</span><span class="p">)),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">return</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">rank</span> <span class="o">*</span> <span class="n">_LOG_2PI</span> <span class="o">+</span> <span class="n">log_det_cov</span> <span class="o">+</span> <span class="n">maha</span><span class="p">)</span>
-
-<span class="nn">File &lt;__array_function__ internals&gt;:180,</span> in <span class="ni">sum</span><span class="nt">(*args, **kwargs)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.10/site-packages/numpy/core/fromnumeric.py:2285,</span> in <span class="ni">sum</span><span class="nt">(a, axis, dtype, out, keepdims, initial, where)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2162</span> <span class="nd">@array_function_dispatch</span><span class="p">(</span><span class="n">_sum_dispatcher</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2163</span> <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">_NoValue</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2164</span>         <span class="n">initial</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">_NoValue</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2165</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2166</span><span class="sd">     Sum of array elements over a given axis.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2167</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2283</span><span class="sd">     15</span>
-<span class="g g-Whitespace">   </span><span class="mi">2284</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">2285</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">_gentype</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2286</span>         <span class="c1"># 2018-02-25, 1.15.0</span>
-<span class="g g-Whitespace">   </span><span class="mi">2287</span>         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">2288</span>             <span class="s2">&quot;Calling np.sum(generator) is deprecated, and in the future will give a different result. &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2289</span>             <span class="s2">&quot;Use np.sum(np.fromiter(generator)) or the python sum builtin instead.&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2290</span>             <span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2292</span>         <span class="n">res</span> <span class="o">=</span> <span class="n">_sum_</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -805,11 +758,11 @@ The estimated covariance matrix is: [[ 0.95983922 -0.11760642],
       </div>
     </a>
     <a class="right-next"
-       href="../ANN/Artificial-neural-network.html"
+       href="Naive-bayes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Artificial neuron networks</p>
+        <p class="prev-next-title"><span class="section-number">6.2. </span>Naive Bayes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -845,7 +798,7 @@ The estimated covariance matrix is: [[ 0.95983922 -0.11760642],
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Raymond Tsao
 </p>
 
   </div>

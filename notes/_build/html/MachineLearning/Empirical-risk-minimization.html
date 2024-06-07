@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Empirical Risk Minimization (ERM) &#8212; My sample book</title>
+    <title>4.1. Empirical Risk Minimization &#8212; Notes on Machine learning</title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cdbe17b3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4787184b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Empirical-risk-minimization';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Discriminative models" href="Discriminative-models.html" />
-    <link rel="prev" title="3. Second order methods" href="../Optimization/Second-order-methods.html" />
+    <link rel="next" title="4.2. Bias variance tradeoff" href="Bias-variance-tradeoff.html" />
+    <link rel="prev" title="4. Supervised learning" href="Supervised-learning.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,14 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
+    <p class="title logo__title">Notes on Machine learning</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -193,20 +187,37 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Steepest-descent.html">2. Steepest descent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Supervised learning</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Empirical Risk Minimization (ERM)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Supervised-learning.html">4. Supervised learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1. Empirical Risk Minimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">7. Artificial neuron networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Neural-networks.html">8. Linear regression</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="kMean-clustering.html">9. K-Mean clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hierarchical-clustering.html">10. Hierarchical clustering</a></li>
 </ul>
 
     </div>
@@ -392,7 +403,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Empirical Risk Minimization (ERM)</h1>
+    <h1>Empirical Risk Minimization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,9 +413,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1. Risk minimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-risk-minimization">4.2. Empirical risk minimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constrain-feasible-function-set">4.3. Constrain feasible function set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1.1. Risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improvement-1-empirical-risk-minimization">4.1.2. Improvement 1: Empirical risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improvement-2-constrained-optimization">4.1.3. Improvement 2: Constrained optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-regression">4.1.4. Example: Linear regression</a></li>
 </ul>
             </nav>
         </div>
@@ -416,40 +428,84 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="empirical-risk-minimization-erm">
-<h1><span class="section-number">4. </span>Empirical Risk Minimization (ERM)<a class="headerlink" href="#empirical-risk-minimization-erm" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="empirical-risk-minimization">
+<h1><span class="section-number">4.1. </span>Empirical Risk Minimization<a class="headerlink" href="#empirical-risk-minimization" title="Link to this heading">#</a></h1>
 <section id="risk-minimization">
-<h2><span class="section-number">4.1. </span>Risk minimization<a class="headerlink" href="#risk-minimization" title="Link to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> <span class="math notranslate nohighlight">\(\mathcal{Y}\)</span> denote the input, response distribution. In machine learning, given <span class="math notranslate nohighlight">\(X\sim \mathcal{X}, Y\sim \mathcal{Y}\)</span>, the main goal is to learn to predict the response <span class="math notranslate nohighlight">\(Y\)</span> given the input <span class="math notranslate nohighlight">\(X\)</span>. In other words, we want to find a predictor <span class="math notranslate nohighlight">\(f:\mathcal{X}\rightarrow \mathcal{Y}\)</span> such that <span class="math notranslate nohighlight">\(f(X)\)</span> predicts <span class="math notranslate nohighlight">\(Y\)</span> nicely. To measure how “nice” a predictor is using a loss function <span class="math notranslate nohighlight">\(\ell: \mathcal{Y}\times \mathcal{Y}\rightarrow \mathbb{R}_{\geq 0}\)</span>. If <span class="math notranslate nohighlight">\(\ell(f(X), Y)\)</span> is small on average (note that <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(Y\)</span> are random variables), then <span class="math notranslate nohighlight">\(f\)</span> is a good predictor. We can frame this as an optimization problem</p>
+<h2><span class="section-number">4.1.1. </span>Risk minimization<a class="headerlink" href="#risk-minimization" title="Link to this heading">#</a></h2>
+<p>Recall that our goal is to find a predictor <span class="math notranslate nohighlight">\(f: \mathcal{X} \rightarrow \mathcal{Y}\)</span> such that <span class="math notranslate nohighlight">\(f(X)\)</span> accurately predicts <span class="math notranslate nohighlight">\(Y\)</span>. To measure the level of accuray, we introduce a loss function <span class="math notranslate nohighlight">\(\ell: \mathcal{Y}\times \mathcal{Y}\rightarrow \mathbb{R}_{\geq 0}\)</span>. The value <span class="math notranslate nohighlight">\(\ell(f(X), Y)\)</span> is large if <span class="math notranslate nohighlight">\(f\)</span> is a poor predictor function. In practice, many loss functions are used depending on the context, for example</p>
+<ol class="arabic simple">
+<li><p>Square loss: <span class="math notranslate nohighlight">\(\ell(y, z)=(y-z)^2\)</span></p></li>
+<li><p>Zero-one loss: <span class="math notranslate nohighlight">\(\ell(y, z)= \mathbb{1}\{y\neq z\}\)</span></p></li>
+<li><p>Absolute loss: <span class="math notranslate nohighlight">\(\ell(y, z)=|y-z|\)</span></p></li>
+</ol>
+<p>We want to find a predictor such that <span class="math notranslate nohighlight">\(\ell(f(X), Y)\)</span> is small on average. This can be framed as an optimization problem:</p>
 <div class="math notranslate nohighlight">
 \[f^* = \underset{f}{\text{argmin}}\; \underbrace{\mathbb{E}_{(X, Y)\sim \mathcal{X}\times \mathcal{Y}}[\ell(f(X), Y)]}_{R(f)} \tag{1}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(R(f)\)</span> denote the risk, or the average loss, of a predictor. Note that this optimization problem is extremely hard to solve, for three main reasons</p>
+<p>Note that expectation is included since <span class="math notranslate nohighlight">\(X, Y\)</span> are random variables. The term <span class="math notranslate nohighlight">\(R(f)\)</span> denote the risk, or the expected loss, of the predictor <span class="math notranslate nohighlight">\(f\)</span>. The solution to <span class="math notranslate nohighlight">\(f^*\)</span> is called the Bayes optimal predictor. For certain loss functions, <span class="math notranslate nohighlight">\(f^*\)</span> can be determined directly <br></p>
+<p><b>Example 1 (Square loss function) </b>
+When <span class="math notranslate nohighlight">\(\ell(y, z)=(y-z)^2\)</span>, the Bayes optimal predictor is given by</p>
+<div class="math notranslate nohighlight">
+\[ f^*(x)=\mathbb{E}[Y|X=x]\]</div>
+<p><i>Proof.</i> <br>
+Instead of solving <span class="math notranslate nohighlight">\((1)\)</span> directly, note that we can solve it in a point-wise manner</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f^*(x) &amp;= \underset{f}{\text{argmin}}\; \mathbb{E}[(f(X)- Y)^2|X=x]\\
+&amp;= \underset{z\in \mathcal{Y}}{\text{argmin}}\; \mathbb{E}[(z-Y)^2|X=x]
+\end{align*}
+\end{split}\]</div>
+<p>The objective can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\mathbb{E}[(z-Y)^2|X=x]
+&amp;= \mathbb{E}[(z- \mathbb{E}[Y|X=x] + \mathbb{E}[Y|X=x] - Y)^2|X=x]\\
+&amp;= \mathbb{E}[(z- \mathbb{E}[Y|X=x])^2|X=x] + 2\mathbb{E}[(z- \mathbb{E}[Y|X=x])(\mathbb{E}[Y|X=x]-Y)|X=x] + \mathbb{E}[(\mathbb{E}[Y|X=x]-Y)^2|X=x]\\
+&amp;= \mathbb{E}[(z- \mathbb{E}[Y|X=x])^2|X=x] + \mathbb{E}[(\mathbb{E}[Y|X=x]-Y)^2|X=x]\\
+\end{align*}
+\end{split}\]</div>
+<p>Since the last term in independent of <span class="math notranslate nohighlight">\(z\)</span>, it follows that the minimizer is given by <span class="math notranslate nohighlight">\(z=\mathbb{E}[Y|X=x]\)</span>. This proves the claim. This example tells us that for regression problems, the Bayes optimal predictor is simply given by the conditional expectation.</p>
+<p>Despite <span class="math notranslate nohighlight">\((1)\)</span> can be solved for certain loss functions, in general, solving <span class="math notranslate nohighlight">\((1)\)</span> is extremly challenging, for three main reasons</p>
 <ol class="arabic simple">
-<li><p>The distribution <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{Y}\)</span> is typically unknown in practice.</p></li>
-<li><p>Even if the distribution <span class="math notranslate nohighlight">\(\mathcal{X}, \mathcal{Y}\)</span> is known, solving the optimization problem requires minimizing a function inside a double integral, which is a hard problem.</p></li>
-<li><p>The space of all feasible fucntion is a large set (typically the set of all measurable functions).</p></li>
+<li><p>The feature/response distributions are typically unknown.</p></li>
+<li><p>Even when the distributions are known, solving <span class="math notranslate nohighlight">\((1)\)</span> involves minimizing a function within an integral. And unfortunately, there aren’t efficient numerical algorithms available for solving these types of problems.</p></li>
+<li><p>The space of all feasible functions is a large set.</p></li>
 </ol>
-<p>This means that in practice, we often cannot solve <span class="math notranslate nohighlight">\((1)\)</span> exactly. We need to simiplfy the optimziation problem.</p>
+<p>This means that in practice, we often cannot solve <span class="math notranslate nohighlight">\((1)\)</span> exactly. Therefore, we need to find ways to simplify the optimization problem.</p>
 </section>
-<section id="empirical-risk-minimization">
-<h2><span class="section-number">4.2. </span>Empirical risk minimization<a class="headerlink" href="#empirical-risk-minimization" title="Link to this heading">#</a></h2>
-<p>Even though the distribution <span class="math notranslate nohighlight">\(\mathcal{X}, \mathcal{Y}\)</span> is unknown in practice, we do have access to the samples <span class="math notranslate nohighlight">\(\mathcal{D}=\{(X_i, y_i)\}_{i\in [n]}\sim \mathcal{X}\times \mathcal{Y}\)</span>. Since under certain regularity conditions</p>
+<section id="improvement-1-empirical-risk-minimization">
+<h2><span class="section-number">4.1.2. </span>Improvement 1: Empirical risk minimization<a class="headerlink" href="#improvement-1-empirical-risk-minimization" title="Link to this heading">#</a></h2>
+<p>One crucial observation is that while the distributions are often unknown in practice, we do have access to observations <span class="math notranslate nohighlight">\(\mathcal{D}=\{(X_i, y_i)\}_{i\in [n]}\)</span> sampled from the original distribution. This is important because, under certain regularity conditions, the law of large numbers suggests that</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i)\;\xrightarrow{\;\;n \to \infty\;\;}\;\mathbb{E}_{(X, Y)\sim \mathcal{X}\times \mathcal{Y}}[\ell(f(X), Y)]\]</div>
 <p>This motivates us to replace the objective in <span class="math notranslate nohighlight">\((1)\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[\hat{f} =  \underset{f}{\text{argmin}}\; \underbrace{\frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i)}_{\hat{R}(f)} \tag{2}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\hat{R}(f)\)</span> is called the empirical risk, it is an estimate of the true risk. This new optimization problem solves problem 1 and problem 2. The size of feasible function is still too large.</p>
+<p>Where the term <span class="math notranslate nohighlight">\(\hat{R}(f)\)</span> is called the empirical risk, it is an estimate of the true risk. The optimization problem <span class="math notranslate nohighlight">\((2)\)</span> resolves point 1 and 2 presented earlier, however, the set of feasible function is still a large set.</p>
 </section>
-<section id="constrain-feasible-function-set">
-<h2><span class="section-number">4.3. </span>Constrain feasible function set<a class="headerlink" href="#constrain-feasible-function-set" title="Link to this heading">#</a></h2>
-<p>Since the size of feasible function set is still too large, a natural resolution is to consider a constrained feasible set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span></p>
+<section id="improvement-2-constrained-optimization">
+<h2><span class="section-number">4.1.3. </span>Improvement 2: Constrained optimization<a class="headerlink" href="#improvement-2-constrained-optimization" title="Link to this heading">#</a></h2>
+<p>A straightforward method to address point 3 is by constraining the set of possible functions. Rather than optimizing over all measurable functions, we confine the feasible function to the set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span>. This gives us the following</p>
 <div class="math notranslate nohighlight">
 \[\hat{f}_{\mathcal{F}} = \underset{f\in \mathcal{F}}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n \ell(f(X_i), y_i) \tag{3}\]</div>
-<p>If the set <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is not parameterized, then solving <span class="math notranslate nohighlight">\((3)\)</span> gives us a nonparameteric model. On the other hand, if <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is parameterized by <span class="math notranslate nohighlight">\(\theta\in \Theta\)</span>, then the final estimate is called a parametric model. In this case, finding the optimal function is equivalent to finding the optimial parameter</p>
+<p>Optimization problem <span class="math notranslate nohighlight">\((3)\)</span> is in general solvable. If the functions in <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is parameterized by <span class="math notranslate nohighlight">\(\theta\in \Theta\)</span>, then <span class="math notranslate nohighlight">\((3)\)</span> is equivalent to a parameter estimation problem</p>
 <div class="math notranslate nohighlight">
-\[\hat{\theta} = \underset{\theta \in \Theta}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n \ell(f_{\theta}(X_i), y_i) \tag{4}\]</div>
-<p>Note that problem <span class="math notranslate nohighlight">\((4)\)</span> can be solved numerically using algorithms such as gradient descent and stochastic gradient descent.</p>
+\[\hat{\theta} = \underset{\theta \in \Theta}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n \ell(f_{\theta}(X_i), y_i)\]</div>
+<p>Which can be solved using algorithms like stochastic gradient descent. This gives us a parametric model. If, on the other hand, <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is not parameterized, then by choosing a good set of functions, in general one can solve <span class="math notranslate nohighlight">\((3)\)</span> using other methods. This gives us a nonparametric model.</p>
+</section>
+<section id="example-linear-regression">
+<h2><span class="section-number">4.1.4. </span>Example: Linear regression<a class="headerlink" href="#example-linear-regression" title="Link to this heading">#</a></h2>
+<p>Suppose we restrict ourselves on the set of linear functions <span class="math notranslate nohighlight">\(\mathcal{F}=\{f:f(x)=\theta^Tx\}\)</span>. Given observations <span class="math notranslate nohighlight">\(\mathcal{D}=\{(X_i, y_i)\}_{i\in [n]}\)</span>, and using the square loss, the optimal parameter is given by</p>
+<div class="math notranslate nohighlight">
+\[\hat{\theta} = \underset{\theta}{\text{argmin}}\; \frac{1}{n}\sum_{i=1}^n (\theta^TX_i- y_i)^2\]</div>
+<p>Letting <span class="math notranslate nohighlight">\(X, y\)</span> denote the matrix of features/response, the above is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[\hat{\theta} = \underset{\theta}{\text{argmin}}\; \frac{1}{n}||X\theta-y||_2^2\]</div>
+<p>This optimization problem can be solved using standard first order methods. From the first order condition</p>
+<div class="math notranslate nohighlight">
+\[\nabla_{\theta} = 2(X^TX)\theta - 2(X^Ty) = 0\implies \hat{\theta} = (X^TX)^{-1}(X^Ty)\]</div>
+<p>And this gives us the optimal predictor under empirical risk minimization.</p>
 </section>
 </section>
 
@@ -484,20 +540,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Optimization/Second-order-methods.html"
+       href="Supervised-learning.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Second order methods</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Supervised learning</p>
       </div>
     </a>
     <a class="right-next"
-       href="Discriminative-models.html"
+       href="Bias-variance-tradeoff.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Discriminative models</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Bias variance tradeoff</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -517,9 +573,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1. Risk minimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-risk-minimization">4.2. Empirical risk minimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constrain-feasible-function-set">4.3. Constrain feasible function set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-minimization">4.1.1. Risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improvement-1-empirical-risk-minimization">4.1.2. Improvement 1: Empirical risk minimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improvement-2-constrained-optimization">4.1.3. Improvement 2: Constrained optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-regression">4.1.4. Example: Linear regression</a></li>
 </ul>
   </nav></div>
 
@@ -534,7 +591,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Raymond Tsao
 </p>
 
   </div>
