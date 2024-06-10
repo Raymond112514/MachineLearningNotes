@@ -10,35 +10,16 @@ parts:
   - file: Optimization/Golden-section-search.ipynb
   - file: Optimization/Steepest-descent.ipynb
   - file: Optimization/Second-order-methods.ipynb
-- caption: B. Supervised learning
+- caption: B. Machine learning
   numbered: true
   chapters:
-  - file: MachineLearning/Supervised-learning.ipynb
-    sections:
-    - file: MachineLearning/Empirical-risk-minimization.ipynb
-    - file: MachineLearning/Bias-variance-tradeoff.ipynb
+  - file: MachineLearning/Empirical-risk-minimization.ipynb
   - file: MachineLearning/Discriminative-models.ipynb
-    sections:
-    - file: MachineLearning/Logistic-regression.ipynb
   - file: MachineLearning/Generative-models.ipynb
     sections:
     - file: MachineLearning/Discriminative-analysis.ipynb 
-    - file: MachineLearning/Naive-bayes.ipynb
-  - file: MachineLearning/Margin-based-classifiers.ipynb
-    sections:
-    - file: MachineLearning/Perceptron-algorithm.ipynb
-    - file: MachineLearning/Support-vector-machine-hard-margin.ipynb
-    - file: MachineLearning/Support-vector-machine-soft-margin.ipynb
-    - file: MachineLearning/Kernel-method.ipynb
-  - file: MachineLearning/Tree-based-methods.ipynb
-    sections:
-    - file: MachineLearning/Regression-tree.ipynb
-    - file: MachineLearning/Classification-tree.ipynb
-    - file: MachineLearning/Bagging.ipynb
-- caption: C. Unsupervised learning
+- caption: C. Artificial neuron network
   numbered: true
   chapters:
-  - file: MachineLearning/Clustering.ipynb
-    sections:
-     - file: MachineLearning/kMean-clustering.ipynb
-     - file: MachineLearning/Hierarchical-clustering.ipynb
+  - file: ANN/Artificial-neural-network.ipynb
+  - file: ANN/Neural-networks.ipynb

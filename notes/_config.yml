@@ -1,13 +1,14 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Notes on Machine learning
-author: Raymond Tsao
+title: My sample book
+author: The Jupyter Book Community
+logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: 'off'
+  execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
