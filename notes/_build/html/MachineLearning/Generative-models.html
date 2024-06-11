@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Generative models &#8212; My sample book</title>
+    <title>6. Generative models &#8212; Notes on Machine learning</title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cdbe17b3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4787184b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -156,14 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
+    <p class="title logo__title">Notes on Machine learning</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -193,20 +187,46 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Steepest-descent.html">2. Steepest descent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Machine learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Supervised learning</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Empirical-risk-minimization.html">4. Empirical Risk Minimization (ERM)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supervised-learning.html">4. Supervised learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Empirical-risk-minimization.html">4.1. Empirical Risk Minimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Artificial neuron network</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Artificial-neural-network.html">7. Artificial neuron networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ANN/Neural-networks.html">8. Linear regression</a></li>
-
+<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">10. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PCA.html">10.1. Principal component analysis</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -406,12 +426,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="generative-models">
 <h1><span class="section-number">6. </span>Generative models<a class="headerlink" href="#generative-models" title="Link to this heading">#</a></h1>
-<p>In discriminative models like linear and logistic regression, we modeled the posterior <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k|X\}\)</span> directly. In generative models, however, we turn to modeling the joint distribution</p>
+<p>In probabilistic discriminative models like logistic regression, we model the posterior distribution <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k|X\}\)</span> directly. In generative models, however, we instead model the joint distribution</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{X, Y\}=\mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}\]</div>
-<p>By modeling the distribution <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k\}\)</span>. Once we’ve model these, we can recontruct the posterior using Bayes theorem</p>
+<p>In practice, this is done by modeling the likelihood <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> and the prior <span class="math notranslate nohighlight">\(\mathbb{P}\{Y=k\}\)</span> separate. Once these distributions have been modeled, we can recontruct the posterior using Bayes theorem</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{Y=k|X\}=\frac{\mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}}{\sum_{k} \mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\}}\]</div>
+<p>During inference, given the features <span class="math notranslate nohighlight">\(X\)</span>, one can compute the posterior and choose the class <span class="math notranslate nohighlight">\(k\)</span> that maximizes the posterior distribution.</p>
+<div class="math notranslate nohighlight">
+\[\hat{k}=\underset{k}{\text{argmin}}\; \mathbb{P}\{Y=k|X\} = \underset{k}{\text{argmin}} \;\mathbb{P}\{X|Y=k\}\mathbb{P}\{Y=k\} \tag{1}\]</div>
+<p>Note that since we are only comparing the posterior probability for each class, we can drop the normalizing factor in <span class="math notranslate nohighlight">\((1)\)</span>. In this section, we discuss several generative models in machine learning.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -482,7 +506,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Raymond Tsao
 </p>
 
   </div>
