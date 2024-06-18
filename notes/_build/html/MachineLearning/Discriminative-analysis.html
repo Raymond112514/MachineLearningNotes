@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6.1. Discriminative analysis &#8212; Notes on Machine learning</title>
+    <title>7.1. Discriminative analysis &#8212; Notes on Machine learning</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Discriminative-analysis';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.2. Naive Bayes" href="Naive-bayes.html" />
-    <link rel="prev" title="6. Generative models" href="Generative-models.html" />
+    <link rel="next" title="7.2. Naive Bayes" href="Naive-bayes.html" />
+    <link rel="prev" title="7. Generative models" href="Generative-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,37 +194,44 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Regression-models.html">5. Regression models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linear-regression.html">5.1. Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Local-averaging-methods.html">5.2. Local averaging methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Splines.html">5.3. Splines</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1. Discriminative analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">6. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Logistic-regression.html">6.1. Logistic regression</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Generative-models.html">7. Generative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">7.2. Naive Bayes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">8. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">8.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">8.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">8.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">8.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">9. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">9.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">9.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">9.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">10. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">10.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">10.2. Hierarchical clustering</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">10. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PCA.html">10.1. Principal component analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">11. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PCA.html">11.1. Principal component analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -422,8 +429,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">6.1.1. Linear discriminant analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">6.1.2. Quadratic discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">7.1.1. Linear discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">7.1.2. Quadratic discriminant analysis</a></li>
 </ul>
             </nav>
         </div>
@@ -436,10 +443,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="discriminative-analysis">
-<h1><span class="section-number">6.1. </span>Discriminative analysis<a class="headerlink" href="#discriminative-analysis" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">7.1. </span>Discriminative analysis<a class="headerlink" href="#discriminative-analysis" title="Link to this heading">#</a></h1>
 <p>In linear and quadratic discriminant analysis, we place a strong assumption on the distribution of the data—we assume that the likelihood <span class="math notranslate nohighlight">\(\mathbb{P}\{X|Y=k\}\)</span> is a multivariate normal distribution <span class="math notranslate nohighlight">\(\mathcal{N}(\mu_k, \Sigma_k)\)</span>.</p>
 <section id="linear-discriminant-analysis">
-<h2><span class="section-number">6.1.1. </span>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.1.1. </span>Linear discriminant analysis<a class="headerlink" href="#linear-discriminant-analysis" title="Link to this heading">#</a></h2>
 <p>In linear discriminant analysis, we model <span class="math notranslate nohighlight">\(X|y=k\)</span> as a multivariate normal distribution <span class="math notranslate nohighlight">\(N(\mu_k, \mathbf{\Sigma})\)</span>. In particular,</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{x|y=k\} = \frac{1}{(2\pi)^{p/2}|\mathbf{\Sigma}|^{1/2}}\exp\bigg(-\frac{1}{2}(x-\mu_k)^T\mathbf{\Sigma}^{-1}(x-\mu_k)\bigg)\]</div>
@@ -628,7 +635,7 @@ The estimated covariance matrix is: [[ 1.20992594 -0.13847892],
 </div>
 </section>
 <section id="quadratic-discriminant-analysis">
-<h2><span class="section-number">6.1.2. </span>Quadratic discriminant analysis<a class="headerlink" href="#quadratic-discriminant-analysis" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">7.1.2. </span>Quadratic discriminant analysis<a class="headerlink" href="#quadratic-discriminant-analysis" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuadraticDiscriminantAnalysis</span><span class="p">:</span>
@@ -763,7 +770,7 @@ The estimated covariance matrix is: [[ 1.20992594 -0.13847892],
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Generative models</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Generative models</p>
       </div>
     </a>
     <a class="right-next"
@@ -771,7 +778,7 @@ The estimated covariance matrix is: [[ 1.20992594 -0.13847892],
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.2. </span>Naive Bayes</p>
+        <p class="prev-next-title"><span class="section-number">7.2. </span>Naive Bayes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -791,8 +798,8 @@ The estimated covariance matrix is: [[ 1.20992594 -0.13847892],
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">6.1.1. Linear discriminant analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">6.1.2. Quadratic discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-discriminant-analysis">7.1.1. Linear discriminant analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratic-discriminant-analysis">7.1.2. Quadratic discriminant analysis</a></li>
 </ul>
   </nav></div>
 

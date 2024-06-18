@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>7. Margin-based classifier &#8212; Notes on Machine learning</title>
+    <title>8. Margin-based classifier &#8212; Notes on Machine learning</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Margin-based-classifiers';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.3. Perceptron algorithm" href="Perceptron-algorithm.html" />
-    <link rel="prev" title="6.2. Naive Bayes" href="Naive-bayes.html" />
+    <link rel="next" title="8.3. Perceptron algorithm" href="Perceptron-algorithm.html" />
+    <link rel="prev" title="7.2. Naive Bayes" href="Naive-bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,37 +194,44 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Regression-models.html">5. Regression models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linear-regression.html">5.1. Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Local-averaging-methods.html">5.2. Local averaging methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Splines.html">5.3. Splines</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">6. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Logistic-regression.html">6.1. Logistic regression</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">7. Margin-based classifier</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">7. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">7.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">7.2. Naive Bayes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">8. Margin-based classifier</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">8.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">8.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">8.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">8.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">9. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">9.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">9.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">9.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">10. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">10.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">10.2. Hierarchical clustering</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">10. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PCA.html">10.1. Principal component analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">11. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PCA.html">11.1. Principal component analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -422,8 +429,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-review-of-euclidean-geometry">7.1. A review of Euclidean geometry</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seperating-data-points">7.2. Seperating data points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-review-of-euclidean-geometry">8.1. A review of Euclidean geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seperating-data-points">8.2. Seperating data points</a></li>
 </ul>
             </nav>
         </div>
@@ -436,10 +443,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="margin-based-classifier">
-<h1><span class="section-number">7. </span>Margin-based classifier<a class="headerlink" href="#margin-based-classifier" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">8. </span>Margin-based classifier<a class="headerlink" href="#margin-based-classifier" title="Link to this heading">#</a></h1>
 <p>The classifiers we’ve discussed so far are probabilistic, involving the modeling of the posterior distribution (\mathbb{P}{Y=k|X}) and using it during inference. In contrast, margin-based classifiers are non-probabilistic methods that leverage the geometric properties of the dataset. In general, these classifiers attempts to find a hyperplane that separates the data points. Before diving into the mathematcis, we first review some Euclidean geometry.</p>
 <section id="a-review-of-euclidean-geometry">
-<h2><span class="section-number">7.1. </span>A review of Euclidean geometry<a class="headerlink" href="#a-review-of-euclidean-geometry" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.1. </span>A review of Euclidean geometry<a class="headerlink" href="#a-review-of-euclidean-geometry" title="Link to this heading">#</a></h2>
 <p>In Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, a hyperplane is determined by the normal vector <span class="math notranslate nohighlight">\(w\)</span> and bias vector <span class="math notranslate nohighlight">\(b\)</span>. The set of points lying on the hyperplane <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{H}=\{x:w^Tx+b=0\}\]</div>
@@ -452,7 +459,7 @@ document.write(`
 <p>Note that an absolute value is included as <span class="math notranslate nohighlight">\(z\)</span> can lie on either side of the hyperplane.</p>
 </section>
 <section id="seperating-data-points">
-<h2><span class="section-number">7.2. </span>Seperating data points<a class="headerlink" href="#seperating-data-points" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.2. </span>Seperating data points<a class="headerlink" href="#seperating-data-points" title="Link to this heading">#</a></h2>
 <p>Recall that our goal is to find a hyperplane that separates the data points. To do so, we need to find a way of describing whether a hyperplane separates the data or not. For the rest of this section, we assume that there exists a hyperplane that separates our data points <span class="math notranslate nohighlight">\(\{(X_i, y_i)\}_{i\in [n]}\)</span>. Moreover, let <span class="math notranslate nohighlight">\(y_i=\{1, -1\}\)</span> be the class labels. <br></p>
 <p>Note that a hyperplane <span class="math notranslate nohighlight">\(\mathcal{H}\)</span> separates the dataset if all points with label <span class="math notranslate nohighlight">\(1\)</span> lies on one side of the half-plane and the points with label <span class="math notranslate nohighlight">\(-1\)</span> lies on the other side. Without loss of generality, assume that points with label <span class="math notranslate nohighlight">\(1\)</span> lies in <span class="math notranslate nohighlight">\(\mathcal{H}_+\)</span> and points with label <span class="math notranslate nohighlight">\(-1\)</span> lies in <span class="math notranslate nohighlight">\(\mathcal{H}_-\)</span>. This means that</p>
 <div class="math notranslate nohighlight">
@@ -509,7 +516,7 @@ w^Tx_i+b&lt;0\hspace{5mm}\text{if}\;y_i=-1
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.2. </span>Naive Bayes</p>
+        <p class="prev-next-title"><span class="section-number">7.2. </span>Naive Bayes</p>
       </div>
     </a>
     <a class="right-next"
@@ -517,7 +524,7 @@ w^Tx_i+b&lt;0\hspace{5mm}\text{if}\;y_i=-1
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.3. </span>Perceptron algorithm</p>
+        <p class="prev-next-title"><span class="section-number">8.3. </span>Perceptron algorithm</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -537,8 +544,8 @@ w^Tx_i+b&lt;0\hspace{5mm}\text{if}\;y_i=-1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-review-of-euclidean-geometry">7.1. A review of Euclidean geometry</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seperating-data-points">7.2. Seperating data points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-review-of-euclidean-geometry">8.1. A review of Euclidean geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seperating-data-points">8.2. Seperating data points</a></li>
 </ul>
   </nav></div>
 

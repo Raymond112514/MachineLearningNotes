@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>7.4. Support vector machine (hard margin) &#8212; Notes on Machine learning</title>
+    <title>8.4. Support vector machine (hard margin) &#8212; Notes on Machine learning</title>
   
   
   
@@ -71,8 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Support-vector-machine-hard-margin';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.5. Support vector machine (soft margin)" href="Support-vector-machine-soft-margin.html" />
-    <link rel="prev" title="7.3. Perceptron algorithm" href="Perceptron-algorithm.html" />
+    <link rel="next" title="8.5. Support vector machine (soft margin)" href="Support-vector-machine-soft-margin.html" />
+    <link rel="prev" title="8.3. Perceptron algorithm" href="Perceptron-algorithm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,37 +194,44 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Regression-models.html">5. Regression models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linear-regression.html">5.1. Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Local-averaging-methods.html">5.2. Local averaging methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Splines.html">5.3. Splines</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">6. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Logistic-regression.html">6.1. Logistic regression</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.4. Support vector machine (hard margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">7. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">7.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">7.2. Naive Bayes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Margin-based-classifiers.html">8. Margin-based classifier</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">8.3. Perceptron algorithm</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">8.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">8.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">9. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">9.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">9.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">9.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">10. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">10.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">10.2. Hierarchical clustering</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">10. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PCA.html">10.1. Principal component analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">11. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PCA.html">11.1. Principal component analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -422,9 +429,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-margin">7.4.1. Geometric margin</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-nonlinear-optimization">7.4.2. Review of nonlinear optimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-svm-problem">7.4.3. Solving the SVM problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-margin">8.4.1. Geometric margin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-nonlinear-optimization">8.4.2. Review of nonlinear optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-svm-problem">8.4.3. Solving the SVM problem</a></li>
 </ul>
             </nav>
         </div>
@@ -437,12 +444,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="support-vector-machine-hard-margin">
-<h1><span class="section-number">7.4. </span>Support vector machine (hard margin)<a class="headerlink" href="#support-vector-machine-hard-margin" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">8.4. </span>Support vector machine (hard margin)<a class="headerlink" href="#support-vector-machine-hard-margin" title="Link to this heading">#</a></h1>
 <p>The perceptron algorithm provides us a way of finding <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(b\)</span> that separates the data points. However, note that there could be many solutions. The solution it finds will depend on the initial values chosen for <span class="math notranslate nohighlight">\(w\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. Both Figure 1a and 1b shows valid solution. <br></p>
 <p>If there are multiple solutions of the problem, then we should select the one that acheives minimum generalization error. Intuitively, we would prefer the classfier in Figure 1b since it has a large margin, in other words, the smallest distance between the hyperplane and any of the samples is larger than the one in Figure 1a. This means that it is less likely to make misclassification on the testing dataset. <br></p>
 <p>How can we find such classifiers? We present a geometric formulation below.</p>
 <section id="geometric-margin">
-<h2><span class="section-number">7.4.1. </span>Geometric margin<a class="headerlink" href="#geometric-margin" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.4.1. </span>Geometric margin<a class="headerlink" href="#geometric-margin" title="Link to this heading">#</a></h2>
 <p>To find the classifier that has a large margin, we need to first define margin mathematically. To do so, recall that the smallest distance from a point <span class="math notranslate nohighlight">\(x_i\)</span> to a hyperplane, denoted as <span class="math notranslate nohighlight">\(\gamma_i\)</span>, is given by</p>
 <div class="math notranslate nohighlight">
 \[\gamma_i=\frac{|w^Tx_i+b|}{||w||} = \frac{y_i(w^Tx_i+b)}{||w||}\]</div>
@@ -467,7 +474,7 @@ document.write(`
 <p>Problem <span class="math notranslate nohighlight">\((2)\)</span> is the quadratic programming problem associated with hard-margin support vector machine. This is called hard-margin because we do not allow any misclassifications on the training dataset. In the next section, we present some nonlinear optimization theory that helps us to solve the optimization problem.</p>
 </section>
 <section id="review-of-nonlinear-optimization">
-<h2><span class="section-number">7.4.2. </span>Review of nonlinear optimization<a class="headerlink" href="#review-of-nonlinear-optimization" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.4.2. </span>Review of nonlinear optimization<a class="headerlink" href="#review-of-nonlinear-optimization" title="Link to this heading">#</a></h2>
 <p>Consider the optimization problem</p>
 <div class="math notranslate nohighlight">
 \[\min_x f(x) \hspace{5mm}\text{subj to} \hspace{3mm} g_i(x)\leq 0\;\text{for}\;i\in [n]\]</div>
@@ -521,7 +528,7 @@ f(x)\hspace{10mm}\text{if}\;g_i(x)\leq 0\;\text{for}\;i\in [n]\\
 <p>It turns out that the optimization problem for SVM satisfies Slater’s condition, therefore in the next section we show how to solve the dual problem.</p>
 </section>
 <section id="solving-the-svm-problem">
-<h2><span class="section-number">7.4.3. </span>Solving the SVM problem<a class="headerlink" href="#solving-the-svm-problem" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.4.3. </span>Solving the SVM problem<a class="headerlink" href="#solving-the-svm-problem" title="Link to this heading">#</a></h2>
 <p>The goal is the solve the optimization problem</p>
 <div class="math notranslate nohighlight">
 \[\min_{w,b} \frac{1}{2}||w||_2^2 \hspace{5mm} \text{subject to} \; y_i(w^Tx_i+b)\geq 1\]</div>
@@ -709,7 +716,7 @@ Optimal solution found.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7.3. </span>Perceptron algorithm</p>
+        <p class="prev-next-title"><span class="section-number">8.3. </span>Perceptron algorithm</p>
       </div>
     </a>
     <a class="right-next"
@@ -717,7 +724,7 @@ Optimal solution found.
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.5. </span>Support vector machine (soft margin)</p>
+        <p class="prev-next-title"><span class="section-number">8.5. </span>Support vector machine (soft margin)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -737,9 +744,9 @@ Optimal solution found.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-margin">7.4.1. Geometric margin</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-nonlinear-optimization">7.4.2. Review of nonlinear optimization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-svm-problem">7.4.3. Solving the SVM problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometric-margin">8.4.1. Geometric margin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-nonlinear-optimization">8.4.2. Review of nonlinear optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-svm-problem">8.4.3. Solving the SVM problem</a></li>
 </ul>
   </nav></div>
 

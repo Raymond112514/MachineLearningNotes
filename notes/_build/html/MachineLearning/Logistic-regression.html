@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Logistic regression &#8212; Notes on Machine learning</title>
+    <title>6.1. Logistic regression &#8212; Notes on Machine learning</title>
   
   
   
@@ -68,9 +68,11 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Logistic regression';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'MachineLearning/Logistic-regression';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Generative models" href="Generative-models.html" />
+    <link rel="prev" title="6. Discriminative models" href="Discriminative-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -132,8 +134,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -188,43 +188,50 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Optimization/Second-order-methods.html">3. Second order methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">B. Supervised learning</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Supervised-learning.html">4. Supervised learning</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Empirical-risk-minimization.html">4.1. Empirical Risk Minimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Bias-variance-tradeoff.html">4.2. Bias variance tradeoff</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Discriminative-models.html">5. Discriminative models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Regression-models.html">5. Regression models</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Linear-regression.html">5.1. Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Local-averaging-methods.html">5.2. Local averaging methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Splines.html">5.3. Splines</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">6. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">6.1. Discriminative analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">6.2. Naive Bayes</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Discriminative-models.html">6. Discriminative models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1. Logistic regression</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">7. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">7.3. Perceptron algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">7.4. Support vector machine (hard margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">7.5. Support vector machine (soft margin)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">7.6. Kernel method</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Generative-models.html">7. Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Discriminative-analysis.html">7.1. Discriminative analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Naive-bayes.html">7.2. Naive Bayes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">8. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">8.1. Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">8.2. Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Bagging.html">8.3. Bagging</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Margin-based-classifiers.html">8. Margin-based classifier</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Perceptron-algorithm.html">8.3. Perceptron algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-hard-margin.html">8.4. Support vector machine (hard margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Support-vector-machine-soft-margin.html">8.5. Support vector machine (soft margin)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kernel-method.html">8.6. Kernel method</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Tree-based-methods.html">9. Tree based methods</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Regression-tree.html">9.1. Regression tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Classification-tree.html">9.2. Classification tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bagging.html">9.3. Bagging</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">C. Unsupervised learning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">9. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">9.1. K-Mean clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">9.2. Hierarchical clustering</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Clustering.html">10. Clustering</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="kMean-clustering.html">10.1. K-Mean clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hierarchical-clustering.html">10.2. Hierarchical clustering</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">10. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PCA.html">10.1. Principal component analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Dimensionality-reduction.html">11. Dimensionality reduction</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PCA.html">11.1. Principal component analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMachineLearning/Logistic regression.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMachineLearning/Logistic-regression.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +335,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/MachineLearning/Logistic regression.ipynb" target="_blank"
+      <li><a href="../_sources/MachineLearning/Logistic-regression.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -422,8 +429,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-logistic-regression">Binary logistic regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-class-logistic-regression">Multiple class logistic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-logistic-regression">6.1.1. Binary logistic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-class-logistic-regression">6.1.2. Multiple class logistic regression</a></li>
 </ul>
             </nav>
         </div>
@@ -436,9 +443,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="logistic-regression">
-<h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6.1. </span>Logistic regression<a class="headerlink" href="#logistic-regression" title="Link to this heading">#</a></h1>
 <section id="binary-logistic-regression">
-<h2>Binary logistic regression<a class="headerlink" href="#binary-logistic-regression" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.1.1. </span>Binary logistic regression<a class="headerlink" href="#binary-logistic-regression" title="Link to this heading">#</a></h2>
 <p>For the sake of simplicity, assume that we are working with binary classification tasks. In logistic regression, we model the posterior distribution as</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{y=k|X\} = \sigma(\beta_k^TX)=\frac{1}{1+\exp(-\beta_k^TX)}\]</div>
@@ -587,7 +594,7 @@ Shape of response matrix: (100,)
 \[\frac{\mathbb{P}\{Y=1|X=x\}}{\mathbb{P}\{Y=0|X=x\}}&gt;1\Longleftrightarrow 1\geq \exp(\beta^Tx_i)\Longleftrightarrow \beta^Tx_i=0\]</div>
 </section>
 <section id="multiple-class-logistic-regression">
-<h2>Multiple class logistic regression<a class="headerlink" href="#multiple-class-logistic-regression" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.1.2. </span>Multiple class logistic regression<a class="headerlink" href="#multiple-class-logistic-regression" title="Link to this heading">#</a></h2>
 <p>Now suppose there are <span class="math notranslate nohighlight">\(K\)</span> classes. In this case, we model the posterior as</p>
 <div class="math notranslate nohighlight">
 \[\mathbb{P}\{y=k|X\} = \frac{\exp(-\beta_k^TX)}{1+\sum_{i=1}^{K-1}\exp(-\beta_i^TX)}\hspace{5mm}\text{for}\;k=1,2,...,K-1\]</div>
@@ -628,6 +635,24 @@ Shape of response matrix: (100,)
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Discriminative-models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Discriminative models</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Generative-models.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Generative models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -644,8 +669,8 @@ Shape of response matrix: (100,)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-logistic-regression">Binary logistic regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-class-logistic-regression">Multiple class logistic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-logistic-regression">6.1.1. Binary logistic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-class-logistic-regression">6.1.2. Multiple class logistic regression</a></li>
 </ul>
   </nav></div>
 

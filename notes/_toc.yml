@@ -17,6 +17,11 @@ parts:
     sections:
     - file: MachineLearning/Empirical-risk-minimization.ipynb
     - file: MachineLearning/Bias-variance-tradeoff.ipynb
+  - file: MachineLearning/Regression-models.ipynb
+    sections:
+    - file: MachineLearning/Linear-regression.ipynb
+    - file: MachineLearning/Local-averaging-methods.ipynb
+    - file: MachineLearning/Splines.ipynb
   - file: MachineLearning/Discriminative-models.ipynb
     sections:
     - file: MachineLearning/Logistic-regression.ipynb
