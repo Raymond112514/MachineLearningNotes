@@ -49,6 +49,10 @@ parts:
      - file: MachineLearning/kMean-clustering.ipynb
      - file: MachineLearning/Hierarchical-clustering.ipynb
      - file: MachineLearning/Gaussian-mixture-model.ipynb
+  - file: MachineLearning/Variational-inference.ipynb
+    sections:
+    - file: MachineLearning/Generalized-EM-algorithm.ipynb
+    - file: MachineLearning/Variational-inference-sec.ipynb
   - file: MachineLearning/Dimensionality-reduction.ipynb
     sections:
      - file: MachineLearning/PCA.ipynb
