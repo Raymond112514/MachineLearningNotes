@@ -40,6 +40,7 @@ parts:
     - file: MachineLearning/Regression-tree.ipynb
     - file: MachineLearning/Classification-tree.ipynb
     - file: MachineLearning/Bagging.ipynb
+    - file: MachineLearning/Random-forest.ipynb
 - caption: C. Unsupervised learning
   numbered: true
   chapters:
@@ -47,6 +48,7 @@ parts:
     sections:
      - file: MachineLearning/kMean-clustering.ipynb
      - file: MachineLearning/Hierarchical-clustering.ipynb
+     - file: MachineLearning/Gaussian-mixture-model.ipynb
   - file: MachineLearning/Dimensionality-reduction.ipynb
     sections:
      - file: MachineLearning/PCA.ipynb
