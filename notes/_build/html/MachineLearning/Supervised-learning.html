@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4787184b" />
   
@@ -440,7 +441,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="supervised-learning">
 <h1><span class="section-number">4. </span>Supervised learning<a class="headerlink" href="#supervised-learning" title="Link to this heading">#</a></h1>
-<p>In supervised learning, we are given some observations <span class="math notranslate nohighlight">\(\mathcal{D} = \{(X_i, y_i)\}_{i \in [n]} \in \mathcal{X} \times \mathcal{Y}\)</span> of features/responses (training data), the main goal is to predict a new <span class="math notranslate nohighlight">\(y \in \mathcal{Y}\)</span> given a previously unseen data <span class="math notranslate nohighlight">\(X \in \mathcal{X}\)</span> (testing data). In other words, we aim to learn a predictor function <span class="math notranslate nohighlight">\(f: \mathcal{X} \rightarrow \mathcal{Y}\)</span> that characterizes the relationship between the features and responses. In this section, we first introduce the empirical risk minimization (ERM) framework used in supervised learning and then move on to a discussion on generalization errors.</p>
+<p>In a supervised learning setup, we are given some observations <span class="math notranslate nohighlight">\(\mathcal{D} = \{(\mathbf{x}_i, y_i)\}_{i \in [n]} \in \mathcal{X} \times \mathcal{Y}\)</span> of features <span class="math notranslate nohighlight">\(\mathbf{x}_i\)</span> and responses <span class="math notranslate nohighlight">\(y_i\)</span>, and the goal is to learn a mapping <span class="math notranslate nohighlight">\(f:\mathcal{X}\rightarrow \mathcal{Y}\)</span> that predicts the response value <span class="math notranslate nohighlight">\(y\in \mathcal{Y}\)</span> given a previously unseen feature instance <span class="math notranslate nohighlight">\(\mathbf{x}\in \mathcal{X}\)</span>. <br></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
